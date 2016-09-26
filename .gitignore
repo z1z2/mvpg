@@ -35,3 +35,6 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# A file that stores custom attributes of its containing folder in the macOS
+.DS_Store
