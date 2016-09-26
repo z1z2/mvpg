@@ -53,7 +53,10 @@ prompt.get(properties, function(err, result) {
 
         readlineSync.question('Press [Enter] to check the answer!');
 
-        cp.exec('start https://www.symbolab.com/solver/polynomial-calculator/' + expr);
+        if(require('os').type() == 'Windows_NT')
+            cp.exec('start https://www.symbolab.com/solver/polynomial-calculator/' + expr);
+        else if(require('os').type() == 'Darwin')
+            cp.exec('open https://www.symbolab.com/solver/polynomial-calculator/' + expr);
     }
 
 });
