@@ -15,8 +15,11 @@ After git installed, type the following command in a termail.
 ### Install node modules
 In the terminal above, type the following commands. 
 > cd mvpg
+
 > npm install
 
 ## Usage
 Still in the terminal, type
 >node index.js
+You will be prompted to input the degree of the polynomials and number of the questions.
+After that, the first polynomial will be shown in the terminal. You can calculate it on your own paper. Press 'Enter' in the terminal if you finished and want to check if the result is correct.
