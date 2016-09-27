@@ -8,13 +8,13 @@ var degrees = 1
 var properties = [
     {
         name: 'degrees',
-        validator: /^[1-2]{1}?$/,
+        validator: /^[1-2]{1}$/,
         default: 1,
         warning: 'degrees must be from 1 to 2'
     },
     {
         name: 'questions',
-        validator: /^[1-9]{1}?$/,
+        validator: /^[1-9]{1}$/,
         default: 5,
         warning: 'questions must be from 1 to 9'
     },
