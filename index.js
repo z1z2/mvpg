@@ -134,7 +134,11 @@ function generateEquation() {
     sign = getSign();
     if (sign == '+')
         sign = '';
-    expr += '=' + sign + getCoeff() + getEquationPart(1);
+    expr += '=';
+    if(simple)
+        expr += getConstant();
+    else
+        expr += sign + getCoeff() + getEquationPart(1);
     console.log(expr);
 
     check(expr);
