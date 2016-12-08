@@ -1,6 +1,6 @@
 # mvpg
-mvpg (Multi-Variables Polynomial Generator) is a [node.js](https://nodejs.org/) based command line application which can generate polynomial expressions. Students can use this application to practice polynomial calculating, and verify their results through [Symbolab](https://www.symbolab.com).
-Currently mvpg supports linear polynomials and quadratic polynomials.
+mvpg (Multi-Variables Polynomial Generator) is a [node.js](https://nodejs.org/) based command line application which can generate polynomial expressions or equations. Students can use this application to practice polynomial calculating, and verify their results through [Symbolab](https://www.symbolab.com).
+Currently mvpg supports linear / quadratic polynomials / equations.
 
 ## Installation
 
