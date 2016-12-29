@@ -8,14 +8,14 @@ var degrees = 1
 var properties = [
     {
         name: 'type',
-        message: 'polynomial [1] or equation [2]',
-        validator: /^[1-2]{1}$/,
+        message: 'polynomial [1], equation [2] or multiplication [3]',
+        validator: /^[1-3]{1}$/,
         default: 1,
-        warning: 'input must be 1 or 2'
+        warning: 'input must be 1, 2 or 3'
     },
     {
         name: 'degrees',
-        message: 'linear [1] or quadratic [2]',
+        message: 'easy [1] or difficult [2]',
         validator: /^[1-2]{1}$/,
         default: 1,
         warning: 'degrees must be from 1 to 2'
@@ -38,8 +38,10 @@ prompt.get(properties, function (err, result) {
         console.log('\n\n' + (q + 1) + '] ');
         if (result.type == 1)
             generatePolynomial();
-        else
+        else if(result.type ==2)
             generateEquation();
+        else
+            generateMultiplication();
     }
 });
 
@@ -162,4 +164,16 @@ function check(expr) {
             }
             console.log(stdout);
         });
+}
+
+function generateMultiplication() {
+
+    var expr = '';
+    if (degrees == 1)
+        expr = Math.round(Math.random()*100000) + "*" + Math.round(Math.random()*1000);
+    else
+        expr = Math.round(Math.random()*100000) + "*" + Math.round(Math.random()*100000);
+    console.log(expr);
+
+    check(expr);
 }
